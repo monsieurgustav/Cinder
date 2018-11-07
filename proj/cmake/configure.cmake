@@ -32,6 +32,8 @@ else()
 	set( CINDER_TARGET_DEFAULT "" )
 endif()
 
+set( CINDER_CXX_FLAGS "-fPIC" )
+
 set( CINDER_TARGET ${CINDER_TARGET_DEFAULT} CACHE STRING "Target platform to build for. Default will match the current OS. Vaid options: linux, macosx, msw, ios, android" )
 if( CINDER_TARGET )
 	string( TOLOWER "${CINDER_TARGET}" CINDER_TARGET_LOWER )

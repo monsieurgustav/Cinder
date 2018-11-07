@@ -92,6 +92,8 @@ else()
     CHECK_CXX_COMPILER_FLAG( "-std=c++11" COMPILER_SUPPORTS_CXX11 )
 endif()
 
+set( CINDER_CXX_FLAGS "-fPIC" )
+
 if( COMPILER_SUPPORTS_CXX14 )
     if( NOT MSVC )
     	set( CINDER_CXX_FLAGS "-std=c++14" )

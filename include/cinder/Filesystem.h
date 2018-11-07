@@ -32,7 +32,11 @@
 #else
 	#define BOOST_FILESYSTEM_VERSION 3
 	#define BOOST_FILESYSTEM_NO_DEPRECATED
-	#include <boost/filesystem.hpp>
+	#include <experimental/filesystem>
+	#include <list>
+	#include <cstring>
+	#include <unistd.h>
+	#include <algorithm>
 #endif
 
 namespace cinder {
@@ -40,7 +44,7 @@ namespace cinder {
 	namespace fs = std::experimental::filesystem;
 } // namespace cinder
 #else
-	namespace fs = boost::filesystem;
+	namespace fs = std::experimental::filesystem;
 } // namespace cinder
 
 namespace boost {
